@@ -30,7 +30,7 @@ export class ProductController {
     return this.productService.findOne(id);
   }
 
-  @Roles(rolesEnum.ADMIN, rolesEnum.SUPERADMIN)
+  @Roles(rolesEnum.SUPERADMIN)
   @UseGuards(RbucGuard)
   @UseGuards(AuthGuard)
   @Patch(':id')
